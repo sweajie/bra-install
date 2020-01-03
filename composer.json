@@ -2,7 +2,7 @@
   "name": "bra/install",
   "description": "install scripts for bra",
   "type": "project",
-  "license": "BPPL",
+  "license": "proprietary",
   "keywords": [
     "cms",
     "bracms",
