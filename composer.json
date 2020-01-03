@@ -50,6 +50,12 @@
     "vendor-dir": "vendor",
     "preferred-install": "dist"
   },
+  "scripts": {
+    "post-autoload-dump": [
+      "@php bra service:discover",
+      "@php bra vendor:publish"
+    ]
+  },
   "repositories": {
     "packagist": {
       "type": "composer",
