@@ -1,0 +1,44 @@
+body.bra-scroll-bar{background:0 0}
+.bra-body.bra-wrapper{overflow:hidden;min-height:100vh;padding:15px}
+.layui-table[lay-size=sm] td,.layui-table[lay-size=sm] th{padding:5px;line-height:24px}
+td a.layui-btn.layui-btn-sm{line-height:24px;padding:0 5px;height:auto;margin:0 5px 0 0}
+.layui-form-item .layui-form-label{width:100px}
+.layui-form-item .layui-input-inline.auto{width:auto}
+    /**header **/
+.bra-admin-header{height:50px;left:0;position:fixed;top:0;width:100%;z-index:500}
+.bra-admin-side{position:fixed;top:0;width:150px;z-index:400;}
+.bra-admin-side .logo{font-weight:300;height:90px;overflow:hidden;z-index:1002}
+
+/** bra side **/
+.bra-v-scroll{height:100%;overflow-x:hidden}
+.menu-list li ul{margin-top:0;font-size:.8rem}
+
+/** sub tabs **/
+.bra-admin-tabs{box-sizing:border-box;height:40px;left:0;line-height:40px;padding:0 80px 0 40px;position:fixed;right:0;top:50px;z-index:510}
+.bra-admin-tabs .controller{box-sizing:border-box;cursor:pointer;height:100%;position:absolute;text-align:center;top:0;-webkit-transition:all .3s;transition:all .3s;width:40px}
+.bra-admin-tabs div.left{left:0}
+.bra-admin-tabs div.right{right:40px}
+.bra-admin-tabs div.down{right:0}
+.bra-admin-tabs ul{font-size:0;height:40px;left:0;overflow:hidden;position:relative;-webkit-transition:all .2s;transition:all .2s;white-space:nowrap}
+.bra-admin-tabs li{cursor:pointer;display:inline-block;font-size:14px;line-height:40px;min-width:65px;padding:0 15px;position:relative;text-align:center;-webkit-transition:all .2s;transition:all .2s;vertical-align:middle}
+.bra-admin-tabs li span{display:inline-block}
+.bra-admin-tabs li .delete{position:absolute;top:10px}
+
+/** bra admin body **/
+.bra-admin-body{bottom:0;left:150px;overflow:hidden;overflow-y:auto;position:fixed;right:0;top:94px;width:auto;z-index:-1}
+.bra-admin-tab-body-item{bottom:0;left:0;overflow:hidden;position:absolute;right:0;top:0}
+.bra-admin-iframe{bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}
+.bra-body .bra-body-header{border-radius: 3px;width:100%;border-bottom:1px solid #eeeff1;padding:10px 20px;background:#fff}
+.layui-fixbar li{width:40px!important;height:40px!important;line-height:40px!important;margin-bottom:5px!important;font-size:20px!important}
+.sub-menu-top{margin-bottom:10px}
+
+
+/** upload**/
+.weui-uploader__input-box{float:left;position:relative;margin-right:9px;margin-bottom:9px;width:77px;height:77px;border:1px solid #d9d9d9}
+.weui-uploader__input-box:before{width:2px;height:39.5px}
+.weui-uploader__input-box:after{width:39.5px;height:2px}
+.weui-uploader__input-box:after,.weui-uploader__input-box:before{content:" ";position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);background-color:#d9d9d9}
+.weui-uploader__input{position:absolute;z-index:1;top:0;left:0;width:100%;height:100%;opacity:0;-webkit-tap-highlight-color:transparent}
+.layui-upload-list>.layui-upload-img{float:left;position:relative;text-align:center;font-size:23px;line-height:80px;overflow:hidden}
+.weui-uploader__file{float:left;margin-right:9px;margin-bottom:9px;width:79px;height:79px;background:no-repeat 50%;background-size:cover}
+.layui-upload-list>.layui-upload-img .close{position:absolute;right:-4px;top:0;background-color:#7a7a7a;opacity:.5;width:25px;height:25px;line-height:30px;color:red}

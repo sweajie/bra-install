@@ -1,0 +1,23 @@
+[v-cloak] {
+    display: none;
+}
+
+html{
+    overflow-y:auto;
+}
+/** scroll bar**/
+.bra-scroll-bar::-webkit-scrollbar {
+    width: 3px;
+}
+.bra-scroll-bar::-webkit-scrollbar-track {
+    background-color:#fafafa;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius:2em;
+}
+.bra-scroll-bar::-webkit-scrollbar-thumb {
+    background-color:#ffbc00;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius:2em;
+}
