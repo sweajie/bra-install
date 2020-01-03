@@ -1,0 +1,5 @@
+config/*
+public/statics/*
+public/tpl/*
+app/*
+tpl/*

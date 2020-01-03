@@ -1,0 +1,59 @@
+{
+  "name": "bra/install",
+  "description": "install scripts for bra",
+  "type": "project",
+  "license": "BPPL",
+  "keywords": [
+    "cms",
+    "bracms",
+    "framework",
+    "thinkphp"
+  ],
+  "homepage": "http://www.bra.ac/",
+  "authors": [
+    {
+      "name": "sweajie",
+      "email": "1620298436@qq.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.1.0",
+    "topthink/framework": "6.0.*",
+    "topthink/think-orm": "2.0.*",
+    "topthink/think-view": "^1.0",
+    "ext-json": "*",
+    "ext-openssl": "*",
+    "ext-curl": "*",
+    "ext-zlib": "*",
+    "overtrue/wechat": "~4.0",
+    "topthink/think-captcha": "^3.0",
+    "qiniu/php-sdk": "^7.2",
+    "topthink/think-image": "^1.0",
+    "topthink/think-multi-app": "^1.0",
+    "phpoffice/phpspreadsheet": "^1.9",
+    "topthink/think-trace": "^1.2",
+    "flc/dysms": "^1.0"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^4.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "app\\": "app"
+    },
+    "psr-0": {
+      "": "extend/"
+    }
+  },
+  "config": {
+    "vendor-dir": "vendor",
+    "preferred-install": "dist"
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  }
+}
