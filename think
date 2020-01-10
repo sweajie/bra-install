@@ -13,12 +13,7 @@
 namespace think;
 
 // 加载基础文件
-use app\bra_swoole\utils\BraApp;
-
 require __DIR__ . '/vendor/autoload.php';
-define("MODULE_NAME", "bracms");
-define("DS", DIRECTORY_SEPARATOR);
-define('SYS_PATH', __DIR__ . DIRECTORY_SEPARATOR);
-$_W['develop'] = true;
+
 // 应用初始化
-(new BraApp())->console->run();
+(new App())->console->run();
