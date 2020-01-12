@@ -37,7 +37,7 @@
         </div>
     </fieldset>
     <div class="step-btns">
-        <a href="{:U('install/index/start_install' , ['step'=>1])}" class="layui-btn layui-btn-big layui-btn-normal">同意协议并安装系统</a>
+        <a href="{:url('install/index/start_install' , ['step'=>1])}" class="layui-btn layui-btn-big layui-btn-normal">同意协议并安装系统</a>
     </div>
 </div>
 {include file="index/foot" /}
