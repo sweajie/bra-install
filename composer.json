@@ -52,8 +52,8 @@
   },
   "scripts": {
     "post-autoload-dump": [
-      "@php bra service:discover",
-      "@php bra vendor:publish"
+      "@php think service:discover",
+      "@php think vendor:publish"
     ]
   },
   "repositories": {
