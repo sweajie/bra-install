@@ -1,6 +1,6 @@
 <?php
 
-namespace app\bra\objects;
+namespace app\install\utils;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
@@ -61,13 +61,7 @@ class BraCurl
 
     public function get_content($url, $method = 'GET', $data = [], $format = true)
     {
-        try {
-            $response = $this->fetch($url, $method, $data);
-        } catch (RequestException $e) {
-            echo $e->getRequest();
-            echo ( $e->getResponse()->getBody());
-            dd(5);
-        }
+        $response = $this->fetch($url, $method, $data);
         $content = $response->getBody();
         if ($format) {
             $content = json_decode($content, 1);

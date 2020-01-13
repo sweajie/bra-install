@@ -22,9 +22,9 @@
 </div>
 
 <script>
-    var next_step_url = "{:U('install/index/start_install' , ['step'=>5])}";
+    var next_step_url = "{:url('install/index/start_install' , ['step'=>5])}";
     var files = <?php echo json_encode($files_to_update) ?>;
-    var down_load_api = "{:U('install/index/download_file')}";
+    var down_load_api = "{:url('install/index/download_file')}";
     // var files_length = files.length;
     var download_num = 0;
 

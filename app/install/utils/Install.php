@@ -2,8 +2,6 @@
 
 namespace app\install\utils;
 
-use app\bra\objects\BraCurl;
-use app\bra\objects\BraFS;
 use think\Config;
 use think\facade\Db;
 
