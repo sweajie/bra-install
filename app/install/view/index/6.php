@@ -7,7 +7,7 @@
 
     <div class="step-btns">
         <a href="{:U('bra/index/index')}" class="layui-btn layui-btn-primary layui-btn-big fl">查看前台</a>
-        <a  class="layui-btn layui-btn-big layui-btn-normal fr" href="{:url('bra_admin/passport/login')}">后台管理</a>
+        <a  class="layui-btn layui-btn-big layui-btn-normal fr" href="{:U('bra_admin/passport/login')}">后台管理</a>
     </div>
 
 </div>

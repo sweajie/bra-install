@@ -4,7 +4,7 @@
         <legend>填写授权码 请加QQ群:496729831 或者QQ:1620298436 获取授权码</legend>
     </fieldset>
 
-    <form class="layui-form" action="{:url('install/index/start_install' ,['step'=>2])}" method="post">
+    <form class="layui-form" action="{:U('install/index/start_install' ,['step'=>2])}" method="post">
 
         <div class="layui-form-item layui-form-text">
             <label class="layui-form-label">授权码</label>
@@ -18,7 +18,7 @@
 
     <div class="step-btns">
         <a href="javascript:history.go(-1);" class="layui-btn layui-btn-primary layui-btn-big fl">返回上一步</a>
-        <a onclick="check_errors(this)" data-url="{:url('install/index/check')}"
+        <a onclick="check_errors(this)" data-url="{:U('install/index/check')}"
            class="layui-btn layui-btn-big layui-btn-normal fr">进行下一步</a>
     </div>
 </div>
@@ -30,7 +30,7 @@
                 , form = layui.form, $ = layui.$;
 
 
-            var next_url = "{:url('install/index/start_install' ,[ 'step'=>3])}";
+            var next_url = "{:U('install/index/start_install' ,[ 'step'=>3])}";
             var api_url = $(obj).data('url');
 
             var $product_licence_code = $("#product_licence_code").val();

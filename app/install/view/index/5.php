@@ -32,10 +32,10 @@
 </div>
 
 <script>
-    var next_step_url = "{:url('install/index/start_install' , ['step'=>6])}";
+    var next_step_url = "{:U('install/index/start_install' , ['step'=>6])}";
     var tables = {:json_encode($sys_tables)};
     var tables = tables.data;
-    var install_model_api = "{:url('install/index/install_model')}";
+    var install_model_api = "{:U('install/index/install_model')}";
 
     function install_tables() {
         layui.use(['layer'] , function () {

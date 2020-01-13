@@ -2,37 +2,28 @@
 
 namespace app\install\controller;
 
-use app\install\utils\BraCurl;
-use app\install\utils\BraFS;
+use app\BaseController;
+use app\bra\objects\BraCurl;
+use app\bra\objects\BraFS;
+use app\bra\objects\BraString;
 use app\install\utils\Install;
 use think\exception\ValidateException;
 use think\facade\Cache;
 use think\facade\Cookie;
 use think\facade\Db;
 use think\facade\View;
-use think\Request;
-use think\Validate;
 
 error_reporting(0);
 
-class Index
+class Index extends BaseController
 {
     public $cms_name = '布拉CMS';
 
-	public $error_msg = '';
+    public $error_msg = '';
 
-	/**
-	 * @var $request Request
-	 */
-	public $request;
-	protected $batchValidate = false;
-
-    public function __construct()
+    public function initialize()
     {
-		$this->request = app()->request;
-		define('BRA_PATH', app()->getRootPath());
-		define('APP_PATH', app()->getBasePath());
-		define('CONF_PATH', app()->getConfigPath());
+        parent::initialize();
         if (file_exists(CONF_PATH . 'install.lock')) {
             die("请删除文件config目录下面的" . 'install.lock文件');
         }
@@ -206,7 +197,7 @@ class Index
         global $_GPC;
         $_GPC = input('param.');
         //执行当前安装
-        if ($this->request->isPost()) {
+        if ($this->isPost()) {
             $action_step = "do_step_" . ($step - 1);
             if ($action_step) {
                 $this->$action_step();
@@ -463,43 +454,5 @@ INFO;
     {
         Install::create_table($table, $module);
     }
-
-	/**
-	 * 验证数据
-	 * @access protected
-	 * @param array $data 数据
-	 * @param string|array $validate 验证器名或者验证规则数组
-	 * @param array $message 提示信息
-	 * @param bool $batch 是否批量验证
-	 * @return array|string|true
-	 * @throws ValidateException
-	 */
-	protected function validate(array $data, $validate, array $message = [], bool $batch = false, $module = 'bra')
-	{
-		if (is_array($validate)) {
-			$v = new Validate();
-			$v->rule($validate);
-		} else {
-			if (strpos($validate, '.')) {
-				// 支持场景
-				list($validate, $scene) = explode('.', $validate);
-			}
-			$class = false !== strpos($validate, '\\') ? $validate : $this->app->parseClass('validate', $validate);
-			$class = '\app\\' . $module . '\verify\\' . $validate;
-			$v = new $class();
-			if (!empty($scene)) {
-				$v->scene($scene);
-			}
-		}
-
-		$v->message($message);
-
-		// 是否批量验证
-		if ($batch || $this->batchValidate) {
-			$v->batch(true);
-		}
-
-		return $v->failException(true)->check($data);
-	}
 
 }

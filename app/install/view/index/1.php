@@ -61,8 +61,7 @@
     </table>
     <div class="step-btns">
         <a href="javascript:history.go(-1);" class="layui-btn layui-btn-primary layui-btn-big fl">返回上一步</a>
-        <a onclick="check_errors(this)" data-url="{:url('install/index/start_install' ,['step'=> 2])}" class="layui-btn
-         layui-btn-big layui-btn-normal fr">进行下一步</a>
+        <a onclick="check_errors(this)" data-url="{:U('install/index/start_install' ,['step'=> 2])}" class="layui-btn layui-btn-big layui-btn-normal fr">进行下一步</a>
     </div>
 </div>
 

@@ -59,7 +59,7 @@
             <button class="layui-btn fl" style="margin-left:120px;" lay-submit="" lay-filter="formSubmit_database">测试数据库连接</button>
         </div>
     </form>
-    <form class="layui-form layui-form-pane" action="{:url('install/index/start_install' , ['step'=>4])}" method="post">
+    <form class="layui-form layui-form-pane" action="{:U('install/index/start_install' , ['step'=>4])}" method="post">
         <fieldset class="layui-elem-field layui-field-title">
             <legend>管理账号设置</legend>
         </fieldset>
@@ -96,7 +96,7 @@
             console.log(data.form) //被执行提交的form对象，一般在存在form标签时才会返回
             console.log(data.field) //当前容器的全部表单字段，名值对形式：{name: value}
 
-            var api_url = "{:url('install/index/do_step_2')}";
+            var api_url = "{:U('install/index/do_step_2')}";
 
             $.post(api_url, data.field, function (data) {
                 layer.msg(data.msg);
